@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+    <modules>
+        <Psquared_DisableStorefront>
+            <version>0.1.0</version>
+        </Psquared_DisableStorefront>
+    </modules>
+    <global>
+        <models>
+            <disablestorefront>
+                <class>Psquared_DisableStorefront_Model</class>
+            </disablestorefront>
+        </models>
+    </global>
+    <frontend>
+        <events>
+            <controller_action_predispatch>
+                <observers>
+                    <disablestorefront>
+                        <class>Psquared_DisableStorefront_Model_Observer</class>
+                        <method>checkRoute</method>
+                    </disablestorefront>
+                </observers>
+            </controller_action_predispatch>
+        </events>
+    </frontend>
+    <default>
+        <web>
+            <url>
+                <disable_storefront>0</disable_storefront>
+            </url>
+        </web>
+    </default>
+</config>
