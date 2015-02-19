@@ -11,6 +11,11 @@
                 <class>Psquared_DisableStorefront_Model</class>
             </disablestorefront>
         </models>
+        <helpers>
+            <disablestorefront>
+                <class>Psquared_DisableStorefront_Helper</class>
+            </disablestorefront>
+        </helpers>
     </global>
     <frontend>
         <events>
@@ -28,6 +33,7 @@
         <web>
             <url>
                 <disable_storefront>0</disable_storefront>
+                <not_after_be_login>1</not_after_be_login>
             </url>
         </web>
     </default>

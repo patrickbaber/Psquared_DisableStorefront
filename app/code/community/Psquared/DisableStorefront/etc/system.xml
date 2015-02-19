@@ -13,8 +13,21 @@
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
-                            <comment><![CDATA[If enabled user will be redirected to the Admin Panel.]]></comment>
+                            <comment><![CDATA[If enabled user will be redirected to Admin Panel.]]></comment>
                         </disable_storefront>
+                        <not_after_be_login translate="label comment">
+                            <label>Not After Admin Panel Login</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[After admin panel login storefront will be reachable. This is a workaround for some routes from Admin Panel to storefront, e.g. a download link to a custom option of type "file".]]></comment>
+                            <depends>
+                                <disable_storefront>1</disable_storefront>
+                            </depends>
+                        </not_after_be_login>
                     </fields>
                 </url>
             </groups>
